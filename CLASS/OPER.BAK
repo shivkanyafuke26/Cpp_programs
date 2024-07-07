@@ -1,0 +1,11 @@
+#include<iostream.h>
+#include<conio.h>
+class oper
+{
+int a,b,c;
+public:
+	void add();
+	void sub();
+	void mul();
+	void div();
+	void mod();

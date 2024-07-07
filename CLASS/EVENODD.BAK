@@ -1,0 +1,43 @@
+#include<iostream.h>
+#include<conio.h>
+class num
+{
+private:
+	int i,n;
+public:
+	void get();
+	void evenodd();
+};
+
+void num::get()
+{
+ cout<<"Enter value for n";
+ cin>>n;
+ for(i=1;i<=n;i++)
+ {
+  cout<<i<<endl;
+ }
+}
+
+void num::evenodd()
+{
+for(i=1;i<=n;i++)
+{
+ if(i%2==0)
+ {
+  cout<<"\n"<<i<<" Is even number\n";
+ }
+ else
+ {
+  cout<<"\n"<<i<<" Is odd number";
+ }
+}
+}
+void main()
+{
+clrscr();
+num n;
+n.get();
+n.evenodd();
+getch();
+}

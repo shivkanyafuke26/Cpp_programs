@@ -1,0 +1,33 @@
+
+
+#include<iostream.h>
+#include<conio.h>
+
+class stud
+{
+//private:
+public:	int r;
+	char nm[20];
+public:
+	void get()
+	{
+	cout<<"\n\t Enter the student roll Num=";
+	cin>>r;
+	   cout<<"\n\t enter the name of student=";
+	   cin>>nm;
+	}
+	void put()
+	{
+	cout<<"Stud Roll Num="<<r<<endl;
+	cout<<"Stud Name="<<nm<<endl;
+	}
+   };
+
+void main()
+   {
+    stud s;
+    clrscr();
+    s.get();
+    s.put();
+    getch();
+   }

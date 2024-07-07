@@ -1,0 +1,42 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+ char str[40],s;
+static int n=0;
+int j;
+ clrscr();
+ cout<<"enter the string\n";
+ cin.get(str,40);
+ int len=strlen(str);
+ do
+ {
+ cout<<"enter the chacter u want to  search\n";
+ cin>>s;
+ //search begin
+
+ for(int i=0;i<len;i++)
+ {
+  if(str[i]==s)
+  {
+    n++;
+  }
+ }
+ if(n!=0)
+ {
+  cout<<"chacter found "<<n<<" times\n";
+
+ }
+
+ else
+ { cout<<"character not found ";
+ }
+
+ cout<<"enter 1 to continue or 0 to exit";
+ cin>>j;
+ }while(j);
+
+
+ getch();
+ }

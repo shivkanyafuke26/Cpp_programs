@@ -1,0 +1,32 @@
+#include<iostream.h>
+#include<conio.h>
+#include<graphics.h>
+class static123
+{
+public : static float cost;
+	 char nm[20];
+	 static int pro;
+public : static void in()
+	 {
+	 pro=44;cost=66.564;
+	  }
+	  void out()
+	  {
+	   cout<<"\n\tEnter Name= ";
+	   cin>>nm;
+	   cout<<"\n\tPro \t Name\t cost";
+	   cout<<"\n\t----------------------------------";
+	   cout<<"\n\t"<<pro<<"\t"<<nm<<"\t"<<cost;
+	   }
+};
+float static123::cost=80.89;
+int static123::pro=44;
+void main()
+{
+textcolor(RED);
+clrscr();
+static123 s;
+static123::in();
+s.out();
+getch();
+}
