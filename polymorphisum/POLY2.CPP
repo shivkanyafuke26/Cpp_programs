@@ -1,0 +1,63 @@
+//bekari products
+#include<iostream.h>
+#include<conio.h>
+class cake
+{
+char f1[10],f2[10],f3[10];
+public:
+ virtual void in()
+ {
+ cout<<"\n\tCAKE FLAVOUR :";
+ cin>>f1;
+ cin>>f2;
+ cin>>f3;
+ }
+};
+
+class chocolate:public cake
+{
+int c1,c2,c3,c4,c5;
+public:
+   void in()
+ {
+ cout<<"\n\tCHOCOLATES (Qty Num) :";
+ cin>>c1;
+ cin>>c2;
+ cin>>c3;
+ cin>>c4;
+ cin>>c5;
+ }
+};
+class pizza:public cake
+{
+char i1[5],i2[5],i3[5],i4[5];
+public:
+ void in()
+ {
+ cout<<"\n\tPIZZA ITEMS :";
+ cin>>i1;
+ cin>>i2;
+ cin>>i3;
+ cin>>i4;
+ }
+};
+void main()
+{
+cake c,*bptr;
+clrscr();
+bptr=&c;
+bptr->in();
+
+chocolate ch,*dptr;
+bptr=&c;
+dptr=&ch;
+dptr->in();
+
+pizza p,*ptr;
+bptr=&c;
+dptr=&ch;
+ptr=&p;
+ptr->in();
+
+getch();
+}

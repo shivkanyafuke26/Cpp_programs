@@ -1,0 +1,56 @@
+/*Pure Virtual Functionure virtual function is a virtual function which has no definition. Pure virtual functions are also called abstract functions.
+
+Abstract Class
+An abstract class is a class whose instances (objects) can't be made. We can only make objects of its subclass (if they are not abstract). Abstract class is also known as abstract base class.
+*/
+
+
+#include <iostream.h>
+#include <conio.h>
+
+class Employee                    //  abstract base class
+{
+	virtual int getSalary() = 0;    // pure virtual function
+};
+
+class Developer : public Employee
+{
+	int salary;
+	public:
+		Developer(int s)
+		{
+			salary = s;
+		}
+		int getSalary()
+		{
+			return salary;
+		}
+};
+
+class Driver : public Employee
+{
+	int salary;
+	public:
+		Driver(int t)
+		{
+			salary = t;
+		}
+		int getSalary()
+		{
+			return salary;
+		}
+};
+
+void main()
+{
+	clrscr();
+	Developer d1(5000);
+	Driver d2(3000);
+	int a, b;
+	a = d1.getSalary();
+	b = d2.getSalary();
+	cout << "Salary of Developer : " << a << endl;
+	cout << "Salary of Driver : " << b << endl;
+	getch();
+}
+

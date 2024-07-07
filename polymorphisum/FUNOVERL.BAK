@@ -1,0 +1,33 @@
+#include<iostream.h>
+#include<conio.h>
+class a
+{
+int m,n;
+public:
+ void in(int x,int y)
+ {
+ m=x;
+ n=y;
+ }
+ void in(int x)
+ {
+  m=n=x;
+ }
+ void put()
+ {
+ cout<<"M="<<m<<endl;
+ cout<<"N="<<n<<endl;
+ //cin>>m>>n;
+ }
+ };
+ void main()
+ {
+ a obj;
+  clrscr();
+  obj.in(20,30);
+  obj.put();
+  obj.in(10);
+	    obj.put();
+	    getch();
+	    }
+

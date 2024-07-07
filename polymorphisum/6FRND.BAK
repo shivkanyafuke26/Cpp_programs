@@ -1,0 +1,50 @@
+#include<iostr eam.h>
+#include<conio.h>
+class Int2;
+
+
+ class Int1
+   {
+     float p,n;
+
+public:      void in()
+      {
+     cout<<"\n\t Enter amt  =";
+     cin>>p;
+     cout<<"\n\tNum of years=";
+     cin>>n;
+      }
+   friend void SI(class Int1,class Int2);
+   };
+
+
+ class Int2
+   {
+     float r;
+
+public: void in1()
+      {
+     cout<<"\n\t Enter ROI  =";
+     cin>>r;
+      }
+   friend void SI(class Int1,class Int2);
+   };
+
+   void SI(Int1 o1,Int2 o2)
+   {
+   float si,ta;
+   si=(o1.p*o1.n*o2.r)/100;
+   cout<<"\n\t Simple Int    =" <<si;
+   ta=si+o1.p;
+   cout<<"\n\t Total Paid Amt=" <<ta;
+   }
+   void main()
+   {
+   Int1 o11;
+   Int2 o22;
+   clrscr();
+   o11.in();
+   o22.in1();
+   SI(o11,o22);
+   getch();
+   }

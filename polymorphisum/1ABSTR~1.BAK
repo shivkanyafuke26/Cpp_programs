@@ -1,0 +1,50 @@
+//abstract class
+#include <iostream.h>
+#include <conio.h>
+
+
+
+class Animals
+{
+public:
+	virtual void sound();
+};
+
+class Dogs
+{
+	public:
+		void sound()
+		{
+			cout << "Dogs bark" << endl;
+		}
+};
+
+class Cats
+{
+	public:
+		void sound()
+		{
+			cout << "Cats meow" << endl;
+		}
+};
+
+class Pigs
+{
+	public:
+		void sound()
+		{
+			cout << "Pigs snort" << endl;
+		}
+};
+
+void main()
+{
+clrscr();
+	Dogs d;
+	Cats c;
+	Pigs p;
+	d.sound();
+	c.sound();
+	p.sound();
+getch();
+}
