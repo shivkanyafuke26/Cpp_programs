@@ -1,0 +1,18 @@
+/*program for array*/
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+int b[10],i;
+clrscr();
+cout<<"\n\tenter the 10 values for array";
+for(i=0;i<10;i++)
+{
+cin>>b[i];
+}
+for(i=0;i<=10;i++)
+{
+cout<<b[i]<<endl;
+}
+getch();
+}
