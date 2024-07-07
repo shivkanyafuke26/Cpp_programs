@@ -1,0 +1,81 @@
+#include<iostream.h>
+#include<conio.h>
+class triangle
+{
+public: int b,h;
+public:void get1()
+		{
+		cout<<"enter b,h of triangle: ";
+		cin>>b>>h;
+		}
+
+};
+
+
+class sqr
+{
+public: int l;
+public:void get2()
+		{
+		cout<<"enter l of triangle: ";
+		cin>>l;
+		}
+
+};
+
+
+class rec
+{
+public: int p,q;
+public:void get3()
+		{
+		cout<<"enter p,q of rec: ";
+		cin>>p>>q;
+		}
+
+};
+
+
+class circle
+{
+public: int r;
+public:void get4()
+		{
+		cout<<"enter r of circle: ";
+		cin>>r;
+		}
+
+};
+
+class area:public triangle,public sqr,public rec,public circle
+{
+public :float  area_triangle,area_sqr,area_rec,area_circle;
+void get5()
+{
+area_triangle=0.5*h*b;
+cout<<"area_triangle= "<<area_triangle;
+
+area_rec=p*q;
+cout<<"area_rec= "<<area_rec;
+
+area_sqr=l*l;
+cout<<"area_sqr= "<<area_sqr;
+
+area_circle=r*r;
+cout<<"area_circle= "<<area_circle;
+
+ }
+} ;
+
+void main()
+{
+
+clrscr();
+area a;
+a.get1();
+a.get2();
+a.get3();
+a.get4();
+a.get5();
+getch();
+}

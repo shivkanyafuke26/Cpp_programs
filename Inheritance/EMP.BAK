@@ -1,0 +1,64 @@
+#include<iostream.h>
+#include<conio.h>
+class worker
+{
+ public:
+	int salary;
+	void get()
+	{
+	 cout<<"\n\t Enter employee salary :";
+	 cin>>salary;
+	}
+	void disp()
+	{
+	 cout<<"\n\t employee salary is ="<<salary;
+	}
+};
+class manager
+{
+ public:
+	char post[5];
+  public:
+	void get1()
+	{
+	 cout<<"\n\t Enter employee post :";
+	 cin >>post;
+	}
+	void disp1()
+	{
+	 cout<<"\n\t employee post is ="<<post;
+	}
+};
+class emp:public worker,public manager
+{
+ public:
+	int emp_id;
+	char nm[10];
+	void get2()
+	{
+	 cout<<"\n\t Enter employee id :";
+	 cin>>emp_id;
+	 cout<<"\n\t Enter employee name :";
+	 cin>>nm;
+	}
+	void disp2()
+	{
+	 cout<<"\n\t Employee id is ="<<emp_id;
+	 cout<<"\n\t Employee name is ="<<nm;
+	}
+};
+void main()
+{
+ emp e;
+ clrscr();
+ e.get2();
+ e.get1();
+ e.get();
+ cout<<"\n\t\t\t EMPLOYEE DETAILS ARE :";
+ e.disp2();
+ e.disp1();
+ e.disp();
+ getch();
+}
+
+

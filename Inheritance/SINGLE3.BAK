@@ -1,0 +1,45 @@
+#include<iostream.h>
+#include<conio.h>
+class num
+{
+public:
+ int a,b;
+
+ public:
+	 void get()
+	 {
+	  cout<<"\n\t Enter first number :";
+	  cin>>a;
+	  cout<<"\n\t Enter second number :";
+	  cin>>d;
+	 }
+	 void disp()
+	 {
+	  cout<<"\n\t vlaues are :"<<a<<"And"<<d;
+	 }
+ };
+
+class add:public num
+{
+ int c;
+ public:
+	void cal()
+	{
+	 c=a+d;
+	}
+	void disp1()
+	{
+	 cout<<"\n\t Addition of two num :"<<c;
+	}
+ };
+
+ void main()
+ {
+  add ob;
+  clrscr();
+  ob.get();
+  ob.disp();
+  ob.cal();
+  ob.disp1();
+  getch();
+ }

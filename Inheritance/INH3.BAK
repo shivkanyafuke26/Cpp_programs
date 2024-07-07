@@ -1,0 +1,27 @@
+#include<iostream.h>
+#include<conio.h>
+class abc
+{
+char n1[10],n2[10];
+public:
+void get1(char a,char b)
+{
+m=a;
+n=b;
+}
+void put1(char p)
+{
+m=n=p;
+}
+void put()
+{
+cout<<"m= "<<m;
+cout<<"n= "<<n;
+}
+} ;
+void main()
+{
+abc.obj;
+clrscr();
+obj.
+}

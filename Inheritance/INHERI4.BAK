@@ -1,0 +1,49 @@
+#include<iostream.h>
+#include<conio.h>
+class person
+{
+private : int age;
+		 char nm[10],edu[10];
+public:void get()
+	  {
+	  cout<<"\n\t enter employe name & edu &age: ";
+	  cin>>age>>nm>>edu;
+	  }
+	  void put()
+	  {
+	  cout<<"\n employe age: "<<age;
+	  cout<<"\n employe name: "<<nm;
+	  cout<<"\n employe edu: "<<edu;
+	  }
+}  ;
+   class cv:public person
+{
+private :int bg;
+		  char hobby;
+
+public:void get2()
+	  {
+	  cout<<"\n\t enter employe bg,hobby : ";
+	  cin>>bg>>hobby;
+	  }
+	  void put2()
+	  {
+
+	  cout<<"\n employe bg: "<<bg;
+	  cout<<"\n hobby: "<<hobby;
+
+	  }
+}  ;
+ void main()
+ {
+ cv c;
+ clrscr();
+ cout<<"\n enter person details: ";
+ c.get();
+ c.put();
+ cout<<"\n enter cv details: ";
+ c.get2();
+ c.put2();
+ getch();
+ }
+

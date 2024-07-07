@@ -1,0 +1,44 @@
+#include<iostream.h>
+#include<conio.h>
+class emp
+{
+private :int emp_id;
+		 char nm[10];
+public:void get()
+	  {
+	  cout<<"\n\t enter employe id &name: ";
+	  cin>>employe_id>>nm;
+	  }
+	  void put()
+	  {
+	  cout<<"\n employe id: "<<employe_id;
+	  cout<<"\n employe name: "<<nm;
+	  }
+}  ;
+   class salary:public emp
+{
+private :int salary,bp,hra,da,pf,np;
+
+public:void get2()
+	  {
+	  cout<<"\n\t enter employe salary,bp,hra,da,pf : ";
+	  cin>>salary>>bp>>hra>>da>>pf;
+	  }
+	  void put2()
+	  {
+	  cout<<"\n employe salary: "<<salary;
+	  cout<<"\n employe bp: "<<bp;
+	  }
+}  ;
+ void main()
+ {
+ fitness f;
+ cout<<"\n enter employe details: ";
+ f.get();
+ f.put();
+ cout<<"\n enter fitness details: ";
+ f.get2();
+ f.put2();
+ getch();
+ }
+

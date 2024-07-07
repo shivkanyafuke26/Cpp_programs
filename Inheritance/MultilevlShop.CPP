@@ -1,0 +1,93 @@
+//multilevel inheritance
+#include<iostream.h>
+#include<conio.h>
+class b1
+{
+
+protected:int bn,d,m,y;
+char sn[20];
+public: void get()
+{
+cout<<"Enter shop name:";
+cin>>sn;
+ cout<<"\nEnter the billno.=";
+ cin>>bn;
+ cout<<"\nEnter the date:";
+ cin>>d>>m>>y;
+ }
+ void put()
+ {
+ cout<<"\n-----------------------------------------------------------------------"<<endl;
+ cout<<"\n*********************"<<sn<<"***************************"<<endl;
+ cout<<"\n-----------------------------------------------------------------------"<<endl;
+
+ cout<<"\nBill no.="<<bn;
+ cout<<"\t\tDate:\t"<<d<<"/"<<m<<"/"<<y;
+ }
+ };
+
+
+ class b2:public b1
+{
+protected:char it[20],it1[20],it2[20];
+float pr,pr1,pr2,q1,q2,q3,a1,a2,a3;
+public: void get1()
+{
+ cout<<"\nEnter the 1st item name,price,quantity\t";
+ cin>>it>>pr>>q1;
+ cout<<"\nEnter the 2nd item name,price,quantity\t";
+ cin>>it1>>pr1>>q2;
+ cout<<"\nEnter the 3rd item name,price,quantity\t";
+ cin>>it2>>pr2>>q3;
+
+ }
+ void put1()
+ {
+ a1=pr*q1;
+ a2=pr1*q2;
+ a3=pr2*q3;
+ cout<<"\n-----------------------------------------------------------------------"<<endl;
+ cout<<"\nsr\titem\tprice\tquantity\tamt";
+ cout<<"\n-----------------------------------------------------------------------"<<endl;
+ cout<<"\n1.\t"<<it<<"\t"<<pr<<"\t*\t"<<q1<<"=\t"<<a1;
+ cout<<"\n2.\t"<<it1<<"\t"<<pr1<<"\t*\t"<<q2<<"=\t"<<a2;
+ cout<<"\n3.\t"<<it2<<"\t"<<pr2<<"\t*\t"<<q3<<"=\t"<<a3;
+
+ }
+ };
+ class b3:public b2
+ {
+  protected: float tot,nb,dis;
+  public:
+	  void cal()
+	  {
+	   tot=a1+a2+a3;
+
+	   if(tot>1000)
+	   {
+	    cout<<"\n\t5% discount on total!!";
+	    dis=(tot*5)/100;
+	    nb=tot-dis;
+	    }
+	    else
+	    {
+	    cout<<"no discount";
+	     nb=tot;
+	     }
+	       cout<<"\n-----------------------------------------------------------------------"<<endl;
+	       cout<<"\nnet bill =" <<nb;
+	     cout<<"\n-----------------------------------------------------------------------"<<endl;
+	     }
+	     };
+    void main()
+    {
+     b3 b;
+     clrscr();
+     b.get();
+     b.get1();
+     b.put();
+     b.put1();
+     b.cal();
+
+     getch();
+     }

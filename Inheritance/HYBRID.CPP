@@ -1,0 +1,101 @@
+//hybrid
+#include<iostream.h>
+#include<conio.h>
+class student
+{
+protected: int rno,m1,m2,m3,m4,m5,m6;
+		   char nm[15];
+public:
+	void getstud()
+		{
+		cout<<"\n\tenter roll numbers and name of student :"<<endl;
+		cin>>rno>>nm;
+		cout<<"\n\tenter marks of 6subject out of 100 :"<<endl;
+		cin>>m1>>m2>>m3>>m4>>m5>>m6;
+		}
+		void putstud()
+		{
+		cout<<"\n\troll number is  :"<<rno<<endl;
+		cout<<"\n\tname of student :"<<nm<<endl;
+		cout<<"\n\tmarks in hindi  :"<<m1<<endl;
+		cout<<"\n\tmarks in math   :"<<m2<<endl;
+		cout<<"\n\tmarks in english:"<<m3<<endl;
+		cout<<"\n\tmarks in science:"<<m4<<endl;
+		cout<<"\n\tmarks in social :"<<m5<<endl;
+		cout<<"\n\tmarks in psyco :"<<m6<<endl;
+		}
+};
+class game:public student
+{
+protected: char gm[10],grade[10];
+public:
+		void getgrd()
+		{
+		cout<<"\n\tenter the name of game which u played in ur school :"<<endl;
+		cin>>gm;
+		}
+		void putgrd()
+		{
+		cout<<"\n\tgame is:"<<endl;
+		}
+};
+class sempro
+{
+//protected:
+public:char sem[20],pro[20];
+		   int mr1,mr2;
+public:
+		void getsp()
+		{
+		cout<<"\n\tenter your seminar topic :"<<endl;
+		cin>>sem;
+		cout<<"\n\t enter marks of seminar out of 100 :"<<endl;
+		cin>>mr1;
+		cout<<"\n\t enter your project name :"<<endl;
+		cin>>pro;
+		cout<<"\n\tenter marks of project out of 150 :"<<endl;
+		cin>>mr2;
+		}
+		void putsp()
+		{
+		cout<<"\n\t seminar topic is="<<sem<<endl;
+		cout<<"\n\t marks obtained="<<mr1<<endl;
+		cout<<"\n\t project topic is="<<pro<<endl;
+		cout<<"\n\t marks obtained="<<mr2<<endl;
+		}
+		};
+class result:public game,public sempro
+{
+
+public: int tot;
+		   char gg[3];
+		   float avg;
+public:
+		void putdata()
+		{
+
+		tot=m1+m2+m3+m4+m5+m6;
+		cout<<"\n\t TOTAL MARKS :"<<tot<<endl;
+		avg=tot/8;
+		cout<<"\n\t AVERAGE MARKS :"<<avg<<endl;
+		cout<<"\n\tgrade in game is :"<<gg<<endl;
+		//cin>>gg;
+
+		}
+};
+void main()
+{
+result r;
+clrscr();
+r.getstud();
+r.putstud();
+
+r.getgrd();
+r.getsp();
+
+r.putstud();
+r.putgrd();
+r.putsp();
+getch();
+}
+

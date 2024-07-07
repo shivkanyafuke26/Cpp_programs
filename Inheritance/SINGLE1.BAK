@@ -1,0 +1,66 @@
+#include<iostream.h>
+#include<conio.h>
+class emp
+{
+ int emp_id;
+ char emp_nm[5],desig[5];
+ public:
+	void get()
+	{
+	 cout<<"\n\t Enter employee id :";
+	 cin>>emp_id;
+
+	 cout<<"\n\t Enter employee name :";
+	 cin>>emp_nm;
+
+	 cout<<"\n\t Enter employee designation :";
+	 cin>>desig;
+	}
+ };
+
+ class salary:public emp
+ {
+  int bp,hra,da,pf,np;
+  public:
+	void get1()
+	{
+	  cout<<"\n\t Enter basic payment :";
+	  cin>>bp;
+
+	  cout<<"\n\t Enter HRA :";
+	  cin>>hra;
+
+	  cout<<"\n\t Enter DA :";
+	  cin>>da;
+
+	  cout<<"\n\t Enter PF :";
+	  cin>>pf;
+	}
+
+	  void cal()
+	  {
+	   np=bp+hra+da+pf;
+	   cout<<"\n\t net payment is :"<<np;
+	  }
+	  void disp()
+	  {
+	   cout<<"\n_____________________________________________";
+	   cout<<"\n\t Basic pay :"<<bp;
+	   cout<<"\n\t HRA :"<<hra;
+	   cout<<"\n\t DA :"<<da;
+	   cout<<"\n\t PF :"<<pf;
+	   cout<<"\n\t Nett Pay :"<<np;
+	  }
+ };
+
+
+ void main()
+ {
+  clrscr();
+  salary s;
+  s.get();
+  s.get1();
+  s.cal();
+  s.disp();
+  getch();
+ }
