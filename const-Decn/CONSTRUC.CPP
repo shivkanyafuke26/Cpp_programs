@@ -1,0 +1,49 @@
+#include<iostream.h>
+#include<conio.h>
+class bank_account
+{
+private:
+	 int pancard_num,id;
+	 char name[10],add[10],gender[10];
+public:
+   bank_account()
+{
+pancard_num=0;id=0;
+}
+
+void put()
+{
+cout<<"enter name: ";
+cin>>name;
+cout<<"enter add: ";
+cin>>add;
+cout<<"ur gender: ";
+cin>>gender;
+cout<<"pancard_num: ";
+cin>>pancard_num;
+cout<<"enter id: ";
+cin>>id;
+}
+void display()
+{
+
+cout<<"your name: "<<name;
+cout<<"address: "<<add;
+cout<<"gender: "<<gender;
+cout<<"pancard_num: "<<pancard_num;
+cout<<"id: "<<id;
+}
+
+~bank_account()
+{
+cout<<"details are deconstructed";
+}
+};
+void main()
+{
+bank_account b;
+clrscr();
+b.put();
+b.display();
+getch();
+}
