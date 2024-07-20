@@ -1,0 +1,48 @@
+#include<iostream.h>
+#include<conio.h>
+class stud
+{
+private:
+       char nm[20],add[20];
+       int r_no,zip;
+public:
+	  stud();   //create const.
+	 ~stud();   //discon
+void read();
+void disp();
+};
+stud::stud()
+{
+cout<<"This is Student Details"<<endl;
+}
+void stud::read()
+{
+cout<<"\n\tenter the student Roll_no=";
+cin>>r_no;
+cout<<"\n\tenter the student name=";
+cin>>nm;
+cout<<"\n\tenter the student address=";
+cin>>add;
+cout<<"\n\tenter the student Zipcode=";
+cin>>zip;
+}
+  void stud::disp()
+  {
+  cout<<"\n\tStudent Roll_no="<<r_no;
+    cout<<"\n\tStudent Name="<<nm;
+      cout<<"\n\tStudent Address="<<add;
+	cout<<"\n\tStudent Zipcode is="<<zip;
+	}
+
+	stud::~stud()
+	{
+	cout<<"\n\tStudent Details is closed.";
+	}
+	void main()
+	{
+	stud s;
+       //	clrscr();
+	s.read();
+	s.disp();
+	getch();
+	}

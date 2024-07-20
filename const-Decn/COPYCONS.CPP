@@ -1,0 +1,38 @@
+//multipel constorot
+
+#include<iostream.h>
+#include<conio.h>
+class abc
+{
+private:int d;
+  public:abc()
+  {
+  d=0;      //default constor
+  }
+  abc(int n)  //parameterised
+  {
+  d=n;
+  }
+  abc(abc &s)  //copy
+  {
+  d=s.d+130;
+  }
+  void disp()
+  {
+  cout<<"\n\tValue of A is="<<d;
+  }
+  };
+  void main()
+  {
+  clrscr();
+  abc x;
+  x.disp();
+
+  abc y(100);
+  y.disp();
+
+  abc z(y);
+  z.disp();
+  getch();
+  }
+

@@ -1,0 +1,39 @@
+//default constrotor
+#include<iostream.h>
+#include<conio.h>
+class integer
+{
+int b,d;
+public:integer(int,int);
+void disp()
+{
+ cout<<"\n\tEnter the value of B="<<b;
+ cout<<"\n\tEnter the value of D="<<d;
+ }
+ };
+ integer::integer(int x,int y)             //controtor define
+ {
+ b=x;
+ d=y;
+ }
+ void main()
+ {
+ int b,d;
+ clrscr();
+ cout<<"\n\tEnter the First Value=";
+ cin>>b;
+ cout<<"\n\tEnter the secon Value=";
+ cin>>d;
+ integer in1(b,d);      //called Implicitly
+ integer in2=integer(b,d);//called Explictly
+
+ cout<<"\n\tObject 1=";
+ in1.disp();
+ cout<<"\n\t Object 2=";
+ in2.disp();
+ getch();
+ }
+
+
+
+

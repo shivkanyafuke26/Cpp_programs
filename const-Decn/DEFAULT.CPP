@@ -1,0 +1,69 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+class bank
+{
+ private:
+	int id,pan,dob,ch;
+	char nm[5],add[10],gen,ac;
+ public:
+	bank()
+	{
+	 id=0;
+	 pan=0;
+	 dob=0;
+	 nm[5]=0;
+	 add[10]=0;
+	 gen=0;
+	 ac=0;
+	}
+
+  ~bank()
+ {
+ cout<<"\n Condtructor is destroyed";
+ }
+
+ void get()
+ {
+
+  cout<<"\n Enter customer id =";
+  cin>>id;
+
+  cout<<"\n Enter customer name =";
+  cin>>nm;
+
+  cout<<"\n Enter customer address =";
+  cin>>add;
+
+  cout<<"\n Enter customer dob is =";
+  cin>>dob;
+
+  cout<<"\n Enter customer gender =";
+  cin>>gen;
+
+  cout<<"\n Enter customer pan no =";
+  cin>>pan;
+
+  cout<<"\n Enter account type =";
+  cin>>ac;
+  }
+void display()
+ {
+  cout<<"\n Enter customer id ="<<id;
+  cout<<"\n Customer name is ="<<nm;
+  cout<<"\n Customer address is ="<<add;
+  cout<<"\n Customer gender is ="<<gen;
+  cout<<"\n Customer dob is ="<<dob;
+  cout<<"\n Customer pan no is ="<<pan;
+  cout<<"\n Account type is ="<<ac;
+ }
+};
+ void main()
+ {
+  clrscr();
+  bank b1;
+  b1.get();
+  b1.display();
+  getch();
+ }
+
